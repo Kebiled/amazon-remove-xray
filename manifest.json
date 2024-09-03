@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Remove Amazon xray panel",
+  "version": "0.1",
+  "description": "Removes the xray panel from Amazon Video",
+  "permissions": ["activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["*://www.amazon.com/*", "*://www.amazon.co.uk/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
